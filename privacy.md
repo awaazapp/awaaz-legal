@@ -17,8 +17,8 @@ If you only read one section, read this one. The rest of this document explains 
 
 Awaaz is operated by an independent developer ("we", "us", "Awaaz"). For the purposes of the EU General Data Protection Regulation (GDPR) and India's Digital Personal Data Protection Act, 2023 (DPDP Act), we are the **Data Controller** (or "Data Fiduciary" under the DPDP Act) for the data described in this policy.
 
-**Contact:** [YOUR_EMAIL_HERE]
-**Developer:** [YOUR_NAME_HERE]
+**Contact:** awaazappofficial@gmail.com
+**Developer:** Awaaz
 **Jurisdiction:** India
 
 ---
@@ -154,7 +154,7 @@ Depending on where you live, you have some or all of the following rights. Awaaz
 - **Right to withdraw consent** — where we rely on consent (e.g. push notifications), you can revoke it at any time from your device settings.
 - **Right to lodge a complaint** — with your local data protection authority. For EEA users, this is your national DPA; for Indian users, the Data Protection Board of India.
 
-To exercise any right that you cannot complete inside the app, email **[YOUR_EMAIL_HERE]**. We will respond within **30 days**.
+To exercise any right that you cannot complete inside the app, email **awaazappofficial@gmail.com**. We will respond within **30 days**.
 
 ---
 
@@ -162,7 +162,7 @@ To exercise any right that you cannot complete inside the app, email **[YOUR_EMA
 
 - Awaaz is **not intended for users under 13** anywhere in the world, and we do not knowingly collect data from them. If we learn that we have collected data from a child under 13, we will delete it promptly.
 - In India, the **DPDP Act, 2023** treats anyone under 18 as a minor and requires verifiable parental consent for processing their data. Awaaz does not currently have a parental consent flow, and is therefore **not intended for users under 18 in India**.
-- If you are a parent or guardian and believe your child has created an Awaaz account, email us at [YOUR_EMAIL_HERE] and we will delete the account.
+- If you are a parent or guardian and believe your child has created an Awaaz account, email us at awaazappofficial@gmail.com and we will delete the account.
 
 ---
 
