@@ -1,7 +1,7 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 22 April 2026
-**Effective date:** 22 April 2026
+**Last updated:** 2 August 2026
+**Effective date:** 2 August 2026
 
 ---
 
@@ -38,10 +38,11 @@ For internal routing, Firebase Authentication requires an email-like identifier.
 
 ### 2.2 Content you create
 
-- **Voice notes** — audio recordings up to 60 seconds, stored as M4A files in Firebase Storage at the path `voice_notes/{your_user_id}/`.
+- **Voice notes** — audio recordings, stored as M4A files in Firebase Storage at the path `voice_notes/{your_user_id}/`. The maximum length is shown in the app and is currently 60 seconds; we may adjust it without changing this policy.
 - **Post titles** — short text descriptions you attach to voice notes.
 - **Voice replies** — threaded voice recordings on other users' posts.
 - **Bio** — an optional text description on your profile.
+- **Images you choose to attach** — you may optionally attach one image to a post or a reply, and set a profile photo. These are selected by you from your device using the system image picker and are uploaded to Firebase Storage (`post_images/{your_user_id}/` for post and reply images, and a separate avatar path for profile photos). We only ever receive the specific image you pick; we never browse, scan, or index your photo library, and the app has no camera access.
 
 *Legal basis: performance of a contract (GDPR Art. 6(1)(b)).*
 
@@ -49,7 +50,7 @@ For internal routing, Firebase Authentication requires an email-like identifier.
 
 - **Follow graph** — the list of accounts you follow and who follows you.
 - **Blocks** — accounts you have blocked. Stored so we can hide their content from you. Not visible to the blocked user.
-- **Listen counts** — aggregate play counts per post. **We do not record *who* listened to a given post**, only that the count increased.
+- **Listens** — when you play a voice note, we record that **you** listened to that post, once. We store this per person rather than as a bare tally so that a post's listen count reflects how many people heard it rather than how many times it was replayed, and so that ranking the feed is not distorted by repeat plays. Listen records are not shown to other users; the post's author sees only the total.
 - **Reports** — if you report a user or post, we store the report, the reported target, and a timestamp. Reports are readable only by administrators.
 
 *Legal basis: legitimate interest (GDPR Art. 6(1)(f)) — operating and moderating a functioning social platform.*
@@ -72,7 +73,7 @@ We want to be explicit about this, because the default for most apps is the oppo
 - No location (neither precise nor approximate)
 - No device advertising ID (IDFA / GAID)
 - No contacts or address book
-- No photos, camera access, or gallery access
+- No camera access, and no access to your photo library beyond the single image you explicitly pick (see 2.2)
 - No microphone access outside of active recording (the mic is only live while you are holding the record button)
 - No data from third-party tracking SDKs
 
@@ -83,7 +84,7 @@ We want to be explicit about this, because the default for most apps is the oppo
 - All data is stored in **Google Firebase** services (Cloud Firestore for structured data, Firebase Storage for audio files, Firebase Authentication for credentials).
 - Data in transit is encrypted using TLS 1.2+.
 - Data at rest is encrypted using Google Cloud's default server-side encryption (AES-256).
-- Access to production data is restricted to the developer account and is governed by **Firestore Security Rules** and **Firebase App Check** (Play Integrity), which prevent unauthorized clients from reading or writing data directly.
+- Access to production data is restricted to the developer account and is governed by **Firestore Security Rules** and **Firebase Storage Security Rules**, which determine what any signed-in client may read or write. Database deletion protection and daily point-in-time recovery are enabled.
 - Passwords are hashed by Firebase Authentication; we have no mechanism to retrieve them.
 
 No system is perfectly secure. If we ever become aware of a breach affecting your personal data, we will notify affected users and the relevant supervisory authority **within 72 hours of discovery**, as required by GDPR Art. 33–34 and the DPDP Act.
@@ -129,7 +130,7 @@ You can delete your account at any time from **Profile → Delete Account**. Del
 - **Your profile** (username, bio, follower counts, badges) is hard-deleted from Firestore.
 - **Your follow relationships** (both directions) are hard-deleted.
 - **Your Firebase Authentication account** is deleted, so the username cannot be used to log in again.
-- **Your voice posts that have no replies from other users** are hard-deleted along with their audio files in Firebase Storage.
+- **Your voice posts that have no replies from other users** are hard-deleted along with their audio files, and any attached images, in Firebase Storage.
 - **Your voice posts that have replies from other users** are **tombstoned** — the audio file is deleted from Storage and the post's own text and author reference are stripped, but the post record remains so that other users' replies on the thread are not orphaned. A tombstoned post displays as "[deleted]" and contains none of your personal data. This is the minimum footprint required to preserve other users' content that they chose to make.
 - **Your replies on other users' posts** follow the same rule — audio and author reference removed, structural placeholder may remain if needed to preserve thread integrity.
 
@@ -193,13 +194,35 @@ We may update this policy over time. When we do:
 
 ---
 
-## 12. Contact
+## 12. Grievance Officer (India)
+
+In accordance with **Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021**, Awaaz publishes the name and contact details of its Grievance Officer. Any user may contact the Grievance Officer about content on Awaaz, a violation of these terms, or the handling of their personal data.
+
+- **Grievance Officer:** Akshay Kapoor
+- **Designation:** Grievance Officer, Awaaz
+- **Email:** awaazappofficial@gmail.com
+- **Address:** *(postal address to be completed before launch — Rule 3(2) requires a physical address to be published)*
+
+**How complaints are handled:**
+
+1. We **acknowledge** every complaint within **24 hours** of receipt.
+2. We **dispose of** the complaint within **15 days** of receipt, and inform you of the outcome.
+3. Complaints concerning content that exposes a person's private area, shows nudity or a sexual act, or is impersonatory in nature are actioned within **24 hours**, as required by Rule 3(2)(b).
+4. Reports of **child sexual abuse or exploitation** are handled under our separate [Child Safety Standards](child-safety.md), which commit to acknowledgement within 24 hours and removal without delay.
+
+When you write, please include your username, what you are complaining about (a link or a description of the post, plus the poster's username), and what outcome you are seeking. It helps us meet the timelines above.
+
+---
+
+## 13. Contact
 
 For privacy questions, data subject requests, or breach reports:
 
 - **Email:** awaazappofficial@gmail.com
 - **Developer:** Awaaz
 - **Response time:** within 30 days for standard requests; within 72 hours for breach reports.
+
+To request deletion of your account without using the app, see [Account Deletion](delete-account.md).
 
 ---
 
