@@ -1,7 +1,7 @@
 # Terms of Service for Awaaz
 
-**Last updated:** 2 August 2026
-**Effective date:** 2 August 2026
+**Last updated:** 4 August 2026
+**Effective date:** 4 August 2026
 
 ---
 
@@ -44,10 +44,15 @@ If we learn that an account belongs to someone below these ages, we will delete 
 
 ## 3. Your account
 
-- You choose a **username** and an **access code** (a password). You are responsible for keeping the access code private.
-- **We cannot recover your access code for you.** Awaaz accounts are not currently tied to an email address, so if you forget your access code we have no way to verify that the account is yours and no way to let you back in. Please choose something you will remember.
+- You create and access your account with **Sign in with Google**. It is the only way in. There is no Awaaz password, and we never see your Google password.
+- **Your Google account is the key to your Awaaz account.** Keeping it secure — and getting back into it if you lose it — is between you and Google. If you lose access to the Google account you signed up with, you lose access to the Awaaz account attached to it, and we cannot transfer that account to a different Google account.
+- Awaaz gives you a **username**, derived from your Google display name. Other users see the username; they do not see your email address or your display name. What we receive from Google and what we keep is set out in [Privacy Policy §2.1](privacy.md).
 - You may not impersonate another person, or pick a username designed to suggest you are someone you are not.
 - One person may hold more than one account, but you may not use multiple accounts to evade a suspension, to inflate engagement on your own posts, or to harass someone.
+
+**Accounts we disable.** We may **disable** an account — for breaking section 5, for evading a previous suspension, or where the law requires it. A disabled account cannot be used to sign in to Awaaz. Its posts and replies are not deleted, and may remain visible to other users along with the replies people recorded on them. **Disabling is not deletion:** if you want the data erased as well, ask us and we will delete it on the terms set out in [Account Deletion](delete-account.md). If you think we disabled an account in error, appeal it as described in section 6.
+
+**Accounts created before Google sign-in.** Awaaz accounts used to be created with a username and an access code, with no email address attached, which meant a forgotten access code locked you out permanently. Every account created that way has now been **disabled** and can no longer be used to sign in. That was the migration, not a judgement on anyone's conduct, so the bar in section 2 on returning after a suspension does not apply to it. Their recordings are retained, not deleted. You are welcome to join again with Sign in with Google — that gives you a **new** account: the old username, posts, followers and history do not carry across, because we have no way to prove that the person signing in with a given Google account is the person who held a particular pre-migration username. If you would rather your old account's data were deleted, email us.
 
 ---
 
@@ -98,6 +103,8 @@ You also agree not to attack the service itself: no scraping, no automated acces
 - suspend the account temporarily; or
 - ban the account permanently.
 
+Suspensions and bans are carried out by **disabling** the account, which works as described in section 3: the person cannot sign in, and their existing posts are retained rather than deleted.
+
 We aim to review reports promptly, and we commit to specific timelines for two categories: **child-safety reports are acknowledged within 24 hours** (see [Child Safety Standards](child-safety.md)), and **grievances raised under Indian law are acknowledged within 24 hours and disposed of within 15 days** (see [Privacy Policy §12](privacy.md)).
 
 **Notice.** Where we remove your content or suspend your account, we will tell you what rule was broken, unless telling you is itself unlawful or would compromise an investigation.
@@ -118,9 +125,9 @@ If something breaks the rules, please report it. That is the mechanism, and at o
 
 ## 8. Ending your use of Awaaz
 
-**You can leave at any time.** Delete your account from **Profile → Delete Account**, or follow [Account Deletion](delete-account.md) if you have uninstalled the app or forgotten your access code. What is deleted and what is retained is set out in that document.
+**You can leave at any time.** Delete your account from **Profile → Delete Account** — Google will ask you to confirm which account you are deleting, and then the deletion runs immediately. If you have uninstalled the app, lost access to your Google account, or your Awaaz account has been disabled, follow [Account Deletion](delete-account.md) instead. What is deleted and what is retained is set out in that document.
 
-**We may suspend or terminate an account** that breaks section 5, that is used to evade a previous suspension, or where we are required to by law.
+**We may suspend or terminate an account** that breaks section 5, that is used to evade a previous suspension, or where we are required to by law. We do that by disabling it, as described in section 3.
 
 ---
 

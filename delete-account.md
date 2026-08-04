@@ -2,7 +2,7 @@
 
 **App:** Awaaz (`com.awaaz.app`)
 **Developer:** Awaaz
-**Last updated:** 2 August 2026
+**Last updated:** 4 August 2026
 
 You can delete your Awaaz account and its data at any time. There are two ways to do it. You do not need an account on this page, and you do not need to sign in anywhere to make the request.
 
@@ -13,7 +13,9 @@ You can delete your Awaaz account and its data at any time. There are two ways t
 1. Open Awaaz.
 2. Go to **Profile** (the rightmost tab).
 3. Scroll to **Delete Account**.
-4. Confirm, and enter your access code when asked.
+4. Confirm, then confirm again with Google when the account picker appears.
+
+That second step is Google checking that it is really you before anything is destroyed. Awaaz never sees your Google password. If you cancel at the picker, nothing is deleted.
 
 Deletion begins immediately and is permanent. Nothing is queued for review.
 
@@ -21,7 +23,7 @@ Deletion begins immediately and is permanent. Nothing is queued for review.
 
 ## Option 2 — Ask us to delete it
 
-Use this if you have uninstalled the app, forgotten your access code, or simply prefer not to do it yourself.
+Use this if you have uninstalled the app, no longer have access to the Google account you signed in with, your Awaaz account has been disabled, or you simply prefer not to do it yourself.
 
 **Email:** awaazappofficial@gmail.com
 **Subject:** Account deletion request
@@ -31,7 +33,7 @@ Please include:
 - your **Awaaz username** (the handle shown as `u/yourname` in the app), and
 - a short confirmation that you are the owner of that account.
 
-Because Awaaz accounts are not tied to an email address, we cannot verify ownership from the address you write from alone. We may ask you one or two questions only you would be able to answer — for example the approximate date you joined, or the title of a post you made — before we proceed. This exists to stop somebody else deleting your account, not to make the process harder than it needs to be.
+If you write from the Google address you signed in with, that is normally all we need — we match it against the address stored on the account. If you write from any other address, or the account predates Google sign-in and so has no email address on it, we may ask you one or two questions only you would be able to answer — for example the approximate date you joined, or the title of a post you made — before we proceed. This exists to stop somebody else deleting your account, not to make the process harder than it needs to be.
 
 **Our timeline:**
 
@@ -44,13 +46,15 @@ Because Awaaz accounts are not tied to an email address, we cannot verify owners
 
 | Data | What happens |
 |---|---|
-| Your profile — username, bio, photo, follower and following counts | **Deleted permanently** |
-| Your login account | **Deleted permanently.** The username cannot be used to sign in again. |
+| Your profile — username, email address, bio, photo, follower and following counts | **Deleted permanently** |
+| Your sign-in record — the link to your Google account, and the account identifier, email address, display name and photo URL Google gave us | **Deleted permanently.** The username cannot be used to sign in again. |
 | Your follow relationships, in both directions | **Deleted permanently** |
 | Your voice posts **with no replies from others** | **Deleted permanently**, including the audio file and any attached image |
 | Your voice replies on other people's posts | Audio, image and your name **deleted permanently** |
 | Your listen records, boosts and blocks | **Deleted permanently** |
 | Your push notification token | **Deleted permanently** |
+
+**Your Google account is not touched.** Deleting your Awaaz account ends Awaaz's access to it and erases what Awaaz stored; the Google account itself, and everything in it, is unaffected. You can also remove Awaaz from your Google account's *Third-party apps & services* settings, but doing that on its own does not delete anything we already hold — for that, use one of the two options above.
 
 ## What is kept, and why
 

@@ -1,13 +1,13 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 2 August 2026
-**Effective date:** 2 August 2026
+**Last updated:** 4 August 2026
+**Effective date:** 4 August 2026
 
 ---
 
 ## Summary (the short version)
 
-Awaaz is a voice-only social network. To make it work, we store the username you pick, the voice notes you record, and the follow relationships you create. We do not collect your email, your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account — and with it, everything we hold about you — from inside the app at any time.
+Awaaz is a voice-only social network. You get in by signing in with Google, and that is now the only way in. From that sign-in we receive your Google email address, display name and profile photo URL, and we store your email address, your profile photo URL and a username derived from your display name. We also store the voice notes you record and the follow relationships you create. We do not collect your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account — and with it, everything we hold about you — from inside the app at any time.
 
 If you only read one section, read this one. The rest of this document explains the same thing in the detail that privacy law requires.
 
@@ -29,12 +29,29 @@ We collect only what the app needs to function. Each item below lists the data, 
 
 ### 2.1 Account information
 
-- **Username** — a unique handle you choose during signup (3–20 characters, alphanumeric and underscore). Used to identify you within the app.
-- **Password** — stored only as a cryptographic hash by Firebase Authentication. We never see, log, or transmit your plaintext password.
+Awaaz accounts are created and accessed with **Sign in with Google**. There is no Awaaz password to choose and no separate Awaaz credential to lose.
 
-For internal routing, Firebase Authentication requires an email-like identifier. We synthesize one from your username (e.g. `yourname@awaaz.local`). It is not a real email address, is never used to contact you, and cannot receive mail.
+When you sign in, Google returns a signed identity token for the Google account you picked. From it the app receives:
+
+- **A Google account identifier** — an opaque id that tells us which account signed in.
+- **Your email address.**
+- **Your Google display name.**
+- **Your Google profile photo URL.**
+
+What we then keep:
+
+- **Firebase Authentication** stores the link between your Google account and your Awaaz account, including the account identifier, email address, display name and profile photo URL that Google supplied.
+- **Your Awaaz profile** (Cloud Firestore, `users/{your_user_id}`) stores a **username**, your **email address**, and your **profile photo URL**.
+- The **username** is derived from your Google display name: the first word, lowercased and reduced to letters, digits and underscores (3–20 characters), with a number or a short random tail added if that handle is already taken. If no usable name can be derived — for example because your display name is not written in the Latin alphabet — a random one is generated instead. Your display name itself is not written to your Awaaz profile.
+- Your **email address is never shown to other users**. We do not send marketing email. We use the address to identify your account and to check that a support or deletion request genuinely comes from you.
+
+*Why we need it: to authenticate you, and to give you a route back into your account. Awaaz previously held no email address at all, which meant a lost credential was unrecoverable; delegating sign-in to Google is what fixes that.*
+
+*The sign-in itself takes place on Google's side and is governed by [Google's Privacy Policy](https://policies.google.com/privacy). Awaaz never sees your Google password, and receives only the basic profile and email address described above.*
 
 *Legal basis: performance of a contract (GDPR Art. 6(1)(b)) — we cannot give you an account without this.*
+
+**Accounts created before Google sign-in.** Until August 2026, an Awaaz account was created with a username and an **access code** (a password), and Firebase Authentication was given a synthetic identifier of the form `yourname@awaaz.local` — not a real address, never used to contact anyone, and unable to receive mail. Those accounts have been **disabled**: they can no longer be used to sign in. Firebase Authentication still holds the synthetic identifier and the hashed access code for as long as the account record exists; the access code itself was never readable by us. Recordings made under those accounts are retained — see [Terms §3](terms.md). If you want a pre-migration account and its data deleted, email us; [Account Deletion](delete-account.md) explains how.
 
 ### 2.2 Content you create
 
@@ -57,7 +74,7 @@ For internal routing, Firebase Authentication requires an email-like identifier.
 
 ### 2.4 Technical and diagnostic data
 
-- **Crash reports** (via Firebase Crashlytics) — if the app crashes, we receive a stack trace, device model, OS version, and app version. These reports do not contain your voice notes, messages, or password.
+- **Crash reports** (via Firebase Crashlytics) — if the app crashes, we receive a stack trace, device model, OS version, and app version. These reports do not contain your voice notes, your messages, or your sign-in tokens.
 - **Analytics events** (via Firebase Analytics) — we record anonymized, aggregate events such as `signup`, `post_created`, `reply_created`, `listen`, `follow`, `share`, and `app_open`. These help us understand which features are used; they do not identify you personally.
 - **Push notification token** (if you enable notifications) — an opaque device-specific token from Firebase Cloud Messaging, used only to deliver notifications you asked for.
 
@@ -65,27 +82,28 @@ For internal routing, Firebase Authentication requires an email-like identifier.
 
 ### 2.5 What we do NOT collect
 
-We want to be explicit about this, because the default for most apps is the opposite:
+We want to be explicit about this, because the default for most apps is the opposite. Beyond the basic Google profile and email address described in 2.1, there is:
 
-- No email address
 - No phone number
-- No real name
 - No location (neither precise nor approximate)
 - No device advertising ID (IDFA / GAID)
 - No contacts or address book
 - No camera access, and no access to your photo library beyond the single image you explicitly pick (see 2.2)
 - No microphone access outside of active recording (the mic is only live while you are holding the record button)
 - No data from third-party tracking SDKs
+- **Nothing else from your Google account.** Signing in gives Awaaz your basic profile and email address and nothing more — not your Gmail, Drive, Calendar, Contacts, or Photos.
+
+Other users see your username, your bio, your profile photo and what you post. They do not see your email address or your Google display name.
 
 ---
 
 ## 3. How your data is stored and secured
 
-- All data is stored in **Google Firebase** services (Cloud Firestore for structured data, Firebase Storage for audio files, Firebase Authentication for credentials).
+- All data is stored in **Google Firebase** services (Cloud Firestore for structured data, Firebase Storage for audio files, Firebase Authentication for sign-in records).
 - Data in transit is encrypted using TLS 1.2+.
 - Data at rest is encrypted using Google Cloud's default server-side encryption (AES-256).
 - Access to production data is restricted to the developer account and is governed by **Firestore Security Rules** and **Firebase Storage Security Rules**, which determine what any signed-in client may read or write. Database deletion protection and daily point-in-time recovery are enabled.
-- Passwords are hashed by Firebase Authentication; we have no mechanism to retrieve them.
+- Awaaz does not set, see, or store a password for your account. Sign-in is delegated to Google, which authenticates you and returns a short-lived signed token that Firebase Authentication verifies. Access codes on pre-migration accounts were hashed by Firebase Authentication and were never retrievable by us; those accounts are disabled (see 2.1).
 
 No system is perfectly secure. If we ever become aware of a breach affecting your personal data, we will notify affected users and the relevant supervisory authority **within 72 hours of discovery**, as required by GDPR Art. 33–34 and the DPDP Act.
 
@@ -104,6 +122,7 @@ Google Cloud is certified under the **EU–U.S. Data Privacy Framework** and off
 We share data only with the infrastructure providers that make the app run:
 
 - **Google Firebase / Google Cloud Platform** — hosting, authentication, storage, analytics, crash reporting, push notifications.
+- **Sign in with Google** — when you tap *Continue with Google*, the sign-in happens on Google's side. Google therefore knows that you signed in to Awaaz, and returns your basic profile and email address to the app. That exchange is governed by [Google's Privacy Policy](https://policies.google.com/privacy). Awaaz does not send your recordings, your listens, or your follow graph to the sign-in service.
 - **Google Play Services** — only if you install the app from the Play Store. Governed by Google's privacy policy.
 
 We do **not**:
@@ -123,13 +142,15 @@ We may disclose data if compelled by a valid legal order from a court of compete
 
 Your account data, voice notes, and activity records are retained as long as your account exists.
 
+If your account is **disabled** (see [Terms §3](terms.md)), the same data is retained. Disabling stops sign-in; it is not deletion. You can still have the data erased — email us as described in [Account Deletion](delete-account.md), and we will delete it on the same terms as an in-app deletion.
+
 ### 6.2 When you delete your account
 
-You can delete your account at any time from **Profile → Delete Account**. Deletion is permanent and is designed to be GDPR-compliant (right to erasure, Art. 17). Specifically:
+You can delete your account at any time from **Profile → Delete Account**. Google asks you to confirm the account first — that step exists so that a phone left unlocked cannot be used to erase someone's recordings. Deletion is permanent and is designed to be GDPR-compliant (right to erasure, Art. 17). Specifically:
 
-- **Your profile** (username, bio, follower counts, badges) is hard-deleted from Firestore.
+- **Your profile** (username, email address, profile photo URL, bio, follower counts, badges) is hard-deleted from Firestore.
 - **Your follow relationships** (both directions) are hard-deleted.
-- **Your Firebase Authentication account** is deleted, so the username cannot be used to log in again.
+- **Your Firebase Authentication account** is deleted. That removes the link between your Google account and Awaaz, along with the account identifier, email address, display name and photo URL Google supplied, and the username cannot be used to sign in again. **Deleting your Awaaz account does not delete or change your Google account** — it only ends Awaaz's access to it. You can also revoke that access from your Google account's *Third-party apps & services* settings, though doing so on its own does not delete anything we already hold.
 - **Your voice posts that have no replies from other users** are hard-deleted along with their audio files, and any attached images, in Firebase Storage.
 - **Your voice posts that have replies from other users** are **tombstoned** — the audio file is deleted from Storage and the post's own text and author reference are stripped, but the post record remains so that other users' replies on the thread are not orphaned. A tombstoned post displays as "[deleted]" and contains none of your personal data. This is the minimum footprint required to preserve other users' content that they chose to make.
 - **Your replies on other users' posts** follow the same rule — audio and author reference removed, structural placeholder may remain if needed to preserve thread integrity.
@@ -148,7 +169,7 @@ Audio files deleted from Firebase Storage may persist in encrypted Google Cloud 
 Depending on where you live, you have some or all of the following rights. Awaaz honors them for **all users, globally**, regardless of local law:
 
 - **Right of access** — see all data we hold about you. Most of it is visible inside the app; for anything else, email us.
-- **Right to rectification** — correct inaccurate data. You can edit your username, bio, and posts in-app.
+- **Right to rectification** — correct inaccurate data. You can edit your username, bio, and posts in-app. Your email address and profile photo URL were taken from your Google account at the moment you first signed in and are not refreshed automatically afterwards; if they have gone out of date and you want them corrected, email us.
 - **Right to erasure ("right to be forgotten")** — delete your account as described above.
 - **Right to data portability** — request a machine-readable export of your data. Email us and we will provide a JSON export of your profile, posts (including audio file links), replies, and follow graph within 30 days.
 - **Right to object / restrict processing** — tell us you do not want us to process your data beyond what is required to deliver the service.
