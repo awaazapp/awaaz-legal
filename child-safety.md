@@ -1,6 +1,6 @@
 # Child Safety Standards for Awaaz
 
-**Last updated:** 26 June 2026
+**Last updated:** 8 August 2026
 **Effective date:** 26 June 2026
 
 ---
@@ -9,7 +9,7 @@
 
 Awaaz has **zero tolerance** for child sexual abuse and exploitation (CSAE) and for child sexual abuse material (CSAM). It is strictly prohibited on Awaaz. When we find it, we remove it, we permanently ban the accounts responsible, and we report it to the appropriate authorities as required by law.
 
-Awaaz is not intended for anyone under 13 (or under 18 in India), and we take active steps to keep children off the platform and to keep all users safe. If you encounter content or behaviour that endangers a child, report it immediately — see "How to report" below.
+Awaaz is not intended for anyone under 13, and we take active steps to keep under-age users off the platform and to keep all users safe. If you encounter content or behaviour that endangers a child, report it immediately — see "How to report" below.
 
 This document is our published Child Safety Standard, as required by Google Play's Child Safety Standards policy for social apps.
 
@@ -41,8 +41,8 @@ There are no exceptions to this standard and no warnings for these violations. A
 
 ### 3.1 Keeping children off the platform
 
-- Awaaz is rated and listed for users **13 and older** globally, and **18 and older in India** (consistent with India's DPDP Act, 2023). Our store listing, content rating, and target-audience declarations reflect this.
-- We do not knowingly allow accounts belonging to children below these ages. If we learn that an account belongs to an underage user, we remove it.
+- Awaaz is rated and listed for users **13 and older**. Our store listing, content rating, and target-audience declarations reflect this.
+- We do not knowingly allow accounts belonging to children below this age. If we learn that an account belongs to an underage user, we remove it.
 
 ### 3.2 In-app reporting and blocking
 
