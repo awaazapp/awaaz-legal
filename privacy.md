@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 4 August 2026
+**Last updated:** 8 August 2026
 **Effective date:** 4 August 2026
 
 ---
@@ -222,7 +222,7 @@ In accordance with **Rule 3(2) of the Information Technology (Intermediary Guide
 - **Grievance Officer:** Akshay Kapoor
 - **Designation:** Grievance Officer, Awaaz
 - **Email:** awaazappofficial@gmail.com
-- **Address:** *(postal address to be completed before launch — Rule 3(2) requires a physical address to be published)*
+- **Address:** Radhey Shyam Park, Sahibabad, Ghaziabad, Uttar Pradesh 201005, India
 
 **How complaints are handled:**
 
