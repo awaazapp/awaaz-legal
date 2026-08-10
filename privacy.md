@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 8 August 2026
+**Last updated:** 10 August 2026
 **Effective date:** 4 August 2026
 
 ---
@@ -182,8 +182,9 @@ To exercise any right that you cannot complete inside the app, email **awaazappo
 
 ## 8. Children and minors
 
-- Awaaz is **not intended for users under 13** anywhere in the world, and we do not knowingly collect data from them. If we learn that we have collected data from a child under 13, we will delete it promptly.
-- Some countries set a higher age below which a parent's consent is required to process a person's data — India's **DPDP Act, 2023**, for example, treats anyone under 18 as a minor. If you are below the age of majority where you live, you may use Awaaz only with the consent and involvement of a parent or guardian, who accepts these terms on your behalf.
+- Awaaz is **not intended for anyone under 18**, anywhere in the world, and we do not knowingly collect data from them. If we learn that we have collected data from someone under 18, we will delete it promptly.
+- We ask every person to confirm they are 18 or over before an account is created, and we record that answer. This is a self-declaration, not identity verification, and we do not present it as one.
+- Setting the bar at 18 also settles the question that different countries answer differently. India's **DPDP Act, 2023**, for example, treats everyone under 18 as a child and requires *verifiable* parental consent to process their data. Awaaz does not offer a parental-consent flow, and does not need one: nobody under 18 is permitted to use the service.
 - If you are a parent or guardian and believe your child has created an Awaaz account, email us at awaazappofficial@gmail.com and we will delete the account.
 
 ---

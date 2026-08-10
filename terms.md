@@ -1,7 +1,7 @@
 # Terms of Service for Awaaz
 
-**Last updated:** 8 August 2026
-**Effective date:** 8 August 2026
+**Last updated:** 10 August 2026
+**Effective date:** 10 August 2026
 
 ---
 
@@ -12,7 +12,7 @@ Awaaz is a voice-only social network. You record short voice notes; other people
 Three things worth knowing before you post:
 
 1. **Your voice notes stay yours.** You give us permission to store them and play them to other users of Awaaz. We do not sell them, and we do not use them to train machine-learning models.
-2. **You must be 13 or over to use Awaaz.**
+2. **You must be 18 or over to use Awaaz.**
 3. **We can remove content and suspend accounts** that break the rules in section 5. That section is short and specific — please read it, because it is what we will point at.
 
 The rest of this document says the same things in the detail that the law requires.
@@ -34,10 +34,12 @@ These Terms should be read together with our [Privacy Policy](privacy.md) and ou
 
 ## 2. Who may use Awaaz
 
-- You must be **at least 13 years old** to use Awaaz.
+- You must be **at least 18 years old** to use Awaaz. We ask you to confirm this when you create an account.
 - You must not be barred from using the service under any applicable law, and you must not have been previously suspended from Awaaz.
 
-If we learn that an account belongs to someone below this age, we will delete it.
+Awaaz is an adults-only service. It is a place for unfiltered, opinionated talk, and we would rather set the bar honestly than admit younger users to a room that was not built for them.
+
+If we learn that an account belongs to someone under 18, we will delete it.
 
 ---
 
