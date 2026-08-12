@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 8 August 2026
+**Last updated:** 12 August 2026
 **Effective date:** 4 August 2026
 
 ---
