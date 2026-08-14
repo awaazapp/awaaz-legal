@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 12 August 2026
+**Last updated:** 14 August 2026
 **Effective date:** 4 August 2026
 
 ---
@@ -217,7 +217,7 @@ We may update this policy over time. When we do:
 
 ## 12. Grievance Officer (India)
 
-In accordance with **Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021**, Awaaz publishes the name and contact details of its Grievance Officer. Any user may contact the Grievance Officer about content on Awaaz, a violation of these terms, or the handling of their personal data.
+In accordance with **Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021**, as amended by the **Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026**, Awaaz publishes the name and contact details of its Grievance Officer. Any user may contact the Grievance Officer about content on Awaaz, a violation of these terms, or the handling of their personal data.
 
 - **Grievance Officer:** Akshay Kapoor
 - **Designation:** Grievance Officer, Awaaz
@@ -227,9 +227,10 @@ In accordance with **Rule 3(2) of the Information Technology (Intermediary Guide
 **How complaints are handled:**
 
 1. We **acknowledge** every complaint within **24 hours** of receipt.
-2. We **dispose of** the complaint within **15 days** of receipt, and inform you of the outcome.
-3. Complaints concerning content that exposes a person's private area, shows nudity or a sexual act, or is impersonatory in nature are actioned within **24 hours**, as required by Rule 3(2)(b).
-4. Reports of **child sexual abuse or exploitation** are handled under our separate [Child Safety Standards](child-safety.md), which commit to acknowledgement within 24 hours and removal without delay.
+2. We **dispose of** the complaint within **7 days** of receipt, and inform you of the outcome.
+3. Complaints seeking removal of unlawful information are resolved within **36 hours**. Where the content exposes a person's private area, shows nudity or a sexual act, or is impersonatory in nature, it is removed within **2 hours**, as required by Rule 3(2)(b).
+4. Content that a court or an appropriate government authority orders removed is taken down within **3 hours**.
+5. Reports of **child sexual abuse or exploitation** are handled under our separate [Child Safety Standards](child-safety.md), which commit to acknowledgement within 24 hours and removal without delay.
 
 When you write, please include your username, what you are complaining about (a link or a description of the post, plus the poster's username), and what outcome you are seeking. It helps us meet the timelines above.
 

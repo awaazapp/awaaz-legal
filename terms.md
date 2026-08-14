@@ -1,6 +1,6 @@
 # Terms of Service for Awaaz
 
-**Last updated:** 12 August 2026
+**Last updated:** 14 August 2026
 **Effective date:** 8 August 2026
 
 ---
@@ -104,7 +104,7 @@ You also agree not to attack the service itself: no scraping, no automated acces
 
 Suspensions and bans are carried out by **disabling** the account, which works as described in section 3: the person cannot sign in, and their existing posts are retained rather than deleted.
 
-We aim to review reports promptly, and we commit to specific timelines for two categories: **child-safety reports are acknowledged within 24 hours** (see [Child Safety Standards](child-safety.md)), and **grievances raised under Indian law are acknowledged within 24 hours and disposed of within 15 days** (see [Privacy Policy §12](privacy.md)).
+We aim to review reports promptly, and we commit to specific timelines for two categories: **child-safety reports are acknowledged within 24 hours** (see [Child Safety Standards](child-safety.md)), and **grievances raised under Indian law are acknowledged within 24 hours and disposed of within 7 days** (see [Privacy Policy §12](privacy.md)).
 
 **Notice.** Where we remove your content or suspend your account, we will tell you what rule was broken, unless telling you is itself unlawful or would compromise an investigation.
 
