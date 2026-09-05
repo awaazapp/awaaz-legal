@@ -30,7 +30,7 @@ Use this if you have uninstalled the app, no longer have access to the Google ac
 
 Please include:
 
-- your **Awaaz username** (the handle shown as `u/yourname` in the app), and
+- your **member number** (shown as `u/101` in the app), and
 - a short confirmation that you are the owner of that account.
 
 If you write from the Google address you signed in with, that is normally all we need — we match it against the address stored on the account. If you write from any other address, or the account predates Google sign-in and so has no email address on it, we may ask you one or two questions only you would be able to answer — for example the approximate date you joined, or the title of a post you made — before we proceed. This exists to stop somebody else deleting your account, not to make the process harder than it needs to be.
@@ -46,8 +46,8 @@ If you write from the Google address you signed in with, that is normally all we
 
 | Data | What happens |
 |---|---|
-| Your profile — username, email address, bio, photo, follower and following counts | **Deleted permanently** |
-| Your sign-in record — the link to your Google account, and the account identifier, email address, display name and photo URL Google gave us | **Deleted permanently.** The username cannot be used to sign in again. |
+| Your profile — member number, display name, email address, bio, photo, follower and following counts | **Deleted permanently** |
+| Your sign-in record — the link to your Google account, and the account identifier, email address, display name and photo URL Google gave us | **Deleted permanently.** Your member number is retired and never reused. |
 | Your follow relationships, in both directions | **Deleted permanently** |
 | Your voice posts **with no replies from others** | **Deleted permanently**, including the audio file and any attached image |
 | Your voice replies on other people's posts | Audio, image and your name **deleted permanently** |
