@@ -1,13 +1,13 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 14 August 2026
+**Last updated:** 5 September 2026
 **Effective date:** 4 August 2026
 
 ---
 
 ## Summary (the short version)
 
-Awaaz is a voice-only social network. You get in by signing in with Google, and that is now the only way in. From that sign-in we receive your Google email address, display name and profile photo URL, and we store your email address, your profile photo URL and a username derived from your display name. We also store the voice notes you record and the follow relationships you create. We do not collect your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account — and with it, everything we hold about you — from inside the app at any time.
+Awaaz is a voice-only social network. You get in by signing in with Google, and that is now the only way in. From that sign-in we receive your Google email address, display name and profile photo URL. We store your email address, and we keep the Google display name and photo URL in a private part of your account that only you and we can read. Your public identity on Awaaz is a **member number** (for example `u/101`) that we assign when you join; other people never see your Google name or your Google photo. You can add an optional display name from your profile if you want to be known. We also store the voice notes you record and the follow relationships you create. We do not collect your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account — and with it, everything we hold about you — from inside the app at any time.
 
 If you only read one section, read this one. The rest of this document explains the same thing in the detail that privacy law requires.
 
@@ -41,8 +41,11 @@ When you sign in, Google returns a signed identity token for the Google account 
 What we then keep:
 
 - **Firebase Authentication** stores the link between your Google account and your Awaaz account, including the account identifier, email address, display name and profile photo URL that Google supplied.
-- **Your Awaaz profile** (Cloud Firestore, `users/{your_user_id}`) stores a **username**, your **email address**, and your **profile photo URL**.
-- The **username** is derived from your Google display name: the first word, lowercased and reduced to letters, digits and underscores (3–20 characters), with a number or a short random tail added if that handle is already taken. If no usable name can be derived — for example because your display name is not written in the Latin alphabet — a random one is generated instead. Your display name itself is not written to your Awaaz profile.
+- **Your Awaaz profile** (Cloud Firestore, `users/{your_user_id}`) stores your **member number** — which is also your **username**, shown as `u/101` — an optional **display name** you may add, the **profile photo you upload** if you choose to, your bio and your follower counts. It does not store your Google display name, your Google profile photo, or your email address, and every signed-in member can read it.
+- **A private part of your profile** (`users/{your_user_id}/private/account`), readable only by you and by us, stores your **email address**, your **Google display name** and your **Google profile photo URL** as received at your first sign-in. We keep them so that we can recognise your account if you contact us, and so that you could choose to use them later. Nothing in Awaaz shows them to anyone else.
+- The **member number** is assigned once, in the order accounts join (numbers 1–100 are held back), and it never changes and is never reused. It is your identity everywhere in Awaaz: on your posts, your replies and your profile. Accounts created before September 2026 were given numbers in the order they had joined, and their earlier posts were relabelled with the number.
+- The **display name** is optional and blank unless you set it. If you add one, it appears under your number on your posts and on your profile — including posts you made before you added it — and on the public page of a post you share. You can change or clear it at any time; clearing it removes it everywhere at once. It may not impersonate Awaaz, its team or another person, and we may clear a display name that does.
+- Your **member number does not hide your voice.** Someone who knows how you sound may still recognise you in a recording.
 - Your **email address is never shown to other users**. We do not send marketing email. We use the address to identify your account and to check that a support or deletion request genuinely comes from you.
 
 *Why we need it: to authenticate you, and to give you a route back into your account. Awaaz previously held no email address at all, which meant a lost credential was unrecoverable; delegating sign-in to Google is what fixes that.*
@@ -93,7 +96,7 @@ We want to be explicit about this, because the default for most apps is the oppo
 - No data from third-party tracking SDKs
 - **Nothing else from your Google account.** Signing in gives Awaaz your basic profile and email address and nothing more — not your Gmail, Drive, Calendar, Contacts, or Photos.
 
-Other users see your username, your bio, your profile photo and what you post. They do not see your email address or your Google display name.
+Other users see your member number (`u/101`), your display name if you have added one, your bio, the profile photo you uploaded if any, and what you post. They do not see your email address, your Google display name, or your Google profile photo.
 
 ---
 
@@ -148,7 +151,7 @@ If your account is **disabled** (see [Terms §3](terms.md)), the same data is re
 
 You can delete your account at any time from **Profile → Delete Account**. Google asks you to confirm the account first — that step exists so that a phone left unlocked cannot be used to erase someone's recordings. Deletion is permanent and is designed to be GDPR-compliant (right to erasure, Art. 17). Specifically:
 
-- **Your profile** (username, email address, profile photo URL, bio, follower counts, badges) is hard-deleted from Firestore.
+- **Your profile** (member number, display name, uploaded profile photo URL, bio, follower counts, badges) and its private part (email address, Google display name and photo URL) are hard-deleted from Firestore. Your member number is retired and never given to anyone else.
 - **Your follow relationships** (both directions) are hard-deleted.
 - **Your Firebase Authentication account** is deleted. That removes the link between your Google account and Awaaz, along with the account identifier, email address, display name and photo URL Google supplied, and the username cannot be used to sign in again. **Deleting your Awaaz account does not delete or change your Google account** — it only ends Awaaz's access to it. You can also revoke that access from your Google account's *Third-party apps & services* settings, though doing so on its own does not delete anything we already hold.
 - **Your voice posts that have no replies from other users** are hard-deleted along with their audio files, and any attached images, in Firebase Storage.
@@ -169,7 +172,7 @@ Audio files deleted from Firebase Storage may persist in encrypted Google Cloud 
 Depending on where you live, you have some or all of the following rights. Awaaz honors them for **all users, globally**, regardless of local law:
 
 - **Right of access** — see all data we hold about you. Most of it is visible inside the app; for anything else, email us.
-- **Right to rectification** — correct inaccurate data. You can edit your username, bio, and posts in-app. Your email address and profile photo URL were taken from your Google account at the moment you first signed in and are not refreshed automatically afterwards; if they have gone out of date and you want them corrected, email us.
+- **Right to rectification** — correct inaccurate data. You can edit your display name, bio, profile photo and posts in-app; your member number cannot be changed. Your email address and the Google name and photo URL we hold privately were taken from your Google account at the moment you first signed in and are not refreshed automatically afterwards; if they have gone out of date and you want them corrected, email us.
 - **Right to erasure ("right to be forgotten")** — delete your account as described above.
 - **Right to data portability** — request a machine-readable export of your data. Email us and we will provide a JSON export of your profile, posts (including audio file links), replies, and follow graph within 30 days.
 - **Right to object / restrict processing** — tell us you do not want us to process your data beyond what is required to deliver the service.

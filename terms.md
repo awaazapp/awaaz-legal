@@ -1,6 +1,6 @@
 # Terms of Service for Awaaz
 
-**Last updated:** 14 August 2026
+**Last updated:** 5 September 2026
 **Effective date:** 8 August 2026
 
 ---
@@ -45,8 +45,8 @@ If we learn that an account belongs to someone below this age, we will delete it
 
 - You create and access your account with **Sign in with Google**. It is the only way in. There is no Awaaz password, and we never see your Google password.
 - **Your Google account is the key to your Awaaz account.** Keeping it secure — and getting back into it if you lose it — is between you and Google. If you lose access to the Google account you signed up with, you lose access to the Awaaz account attached to it, and we cannot transfer that account to a different Google account.
-- Awaaz gives you a **username**, derived from your Google display name. Other users see the username; they do not see your email address or your display name. What we receive from Google and what we keep is set out in [Privacy Policy §2.1](privacy.md).
-- You may not impersonate another person, or pick a username designed to suggest you are someone you are not.
+- Awaaz gives you a **member number** (for example `u/101`) when you join. It is your username and your identity on Awaaz, and it cannot be changed. Other users see the number, and a **display name** only if you choose to add one from your profile; they do not see your email address, your Google display name, or your Google profile photo. What we receive from Google and what we keep is set out in [Privacy Policy §2.1](privacy.md).
+- You may not impersonate another person, Awaaz, or its team, and you may not set a display name designed to suggest you are someone you are not — including a name that reads as another member's number. We may clear a display name that breaks this rule.
 - One person may hold more than one account, but you may not use multiple accounts to evade a suspension, to inflate engagement on your own posts, or to harass someone.
 
 **Accounts we disable.** We may **disable** an account — for breaking section 5, for evading a previous suspension, or where the law requires it. A disabled account cannot be used to sign in to Awaaz. Its posts and replies are not deleted, and may remain visible to other users along with the replies people recorded on them. **Disabling is not deletion:** if you want the data erased as well, ask us and we will delete it on the terms set out in [Account Deletion](delete-account.md). If you think we disabled an account in error, appeal it as described in section 6.
@@ -108,7 +108,7 @@ We aim to review reports promptly, and we commit to specific timelines for two c
 
 **Notice.** Where we remove your content or suspend your account, we will tell you what rule was broken, unless telling you is itself unlawful or would compromise an investigation.
 
-**Appeals.** If you believe we got it wrong, reply to the notice, or email awaazappofficial@gmail.com with your username and what happened. A person will look at it again.
+**Appeals.** If you believe we got it wrong, reply to the notice, or email awaazappofficial@gmail.com with your member number and what happened. A person will look at it again.
 
 **Awaaz is an intermediary.** We do not pre-screen content. Voice notes are published the moment you record them, and we act on content after it is reported or otherwise comes to our attention.
 
