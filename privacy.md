@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 5 September 2026
+**Last updated:** 28 September 2026
 **Effective date:** 4 August 2026
 
 ---
@@ -46,7 +46,7 @@ What we then keep:
 - The **member number** is assigned once, in the order accounts join (numbers 1–100 are held back), and it never changes and is never reused. It is your identity everywhere in Awaaz: on your posts, your replies and your profile. Accounts created before September 2026 were given numbers in the order they had joined, and their earlier posts were relabelled with the number.
 - The **display name** is optional and blank unless you set it. If you add one, it appears under your number on your posts and on your profile — including posts you made before you added it — and on the public page of a post you share. You can change or clear it at any time; clearing it removes it everywhere at once. It may not impersonate Awaaz, its team or another person, and we may clear a display name that does.
 - Your **member number does not hide your voice.** Someone who knows how you sound may still recognise you in a recording.
-- Your **email address is never shown to other users**. We do not send marketing email. We use the address to identify your account and to check that a support or deletion request genuinely comes from you.
+- Your **email address is never shown to other users**. We use the address to identify your account and to check that a support or deletion request genuinely comes from you. If you aren't getting Awaaz notifications on your device — for example, when you use Awaaz in a web browser — we may email you when someone replies to one of your voice notes, at most once an hour, from awaazappofficial@gmail.com. Every one of these emails has a one-click unsubscribe link. We still do not send marketing email.
 
 *Why we need it: to authenticate you, and to give you a route back into your account. Awaaz previously held no email address at all, which meant a lost credential was unrecoverable; delegating sign-in to Google is what fixes that.*
 
