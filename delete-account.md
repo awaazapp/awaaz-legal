@@ -2,7 +2,7 @@
 
 **App:** Awaaz (`com.awaaz.app`)
 **Developer:** Awaaz
-**Last updated:** 4 August 2026
+**Last updated:** 29 September 2026
 
 You can delete your Awaaz account and its data at any time. There are two ways to do it. You do not need an account on this page, and you do not need to sign in anywhere to make the request.
 
@@ -17,7 +17,7 @@ You can delete your Awaaz account and its data at any time. There are two ways t
 
 That second step is Google checking that it is really you before anything is destroyed. Awaaz never sees your Google password. If you cancel at the picker, nothing is deleted.
 
-Deletion begins immediately and is permanent. Nothing is queued for review.
+**You then have 30 days to change your mind.** Your profile, posts and replies are hidden right away, you are signed out on every device, and we email you the date your account will be permanently deleted (with a reminder 3 days before). **Sign back in before then and everything comes back exactly as it was.** Otherwise the account is permanently deleted on that date, as described below.
 
 ---
 
@@ -50,8 +50,8 @@ If you write from the Google address you signed in with, that is normally all we
 | Your sign-in record — the link to your Google account, and the account identifier, email address, display name and photo URL Google gave us | **Deleted permanently.** Your member number is retired and never reused. |
 | Your follow relationships, in both directions | **Deleted permanently** |
 | Your voice posts **with no replies from others** | **Deleted permanently**, including the audio file and any attached image |
-| Your voice replies on other people's posts | Audio, image and your name **deleted permanently** |
-| Your listen records, boosts and blocks | **Deleted permanently** |
+| Your voice replies | Audio, image and your name **deleted permanently**; a `[deleted]` placeholder keeps its place in the conversation (see below) |
+| Your blocks and mehfil memberships | **Deleted permanently** |
 | Your push notification token | **Deleted permanently** |
 
 **Your Google account is not touched.** Deleting your Awaaz account ends Awaaz's access to it and erases what Awaaz stored; the Google account itself, and everything in it, is unaffected. You can also remove Awaaz from your Google account's *Third-party apps & services* settings, but doing that on its own does not delete anything we already hold — for that, use one of the two options above.
@@ -60,7 +60,9 @@ If you write from the Google address you signed in with, that is normally all we
 
 | Data | What happens | Why |
 |---|---|---|
-| Your voice posts **that other people have replied to** | The post becomes a **tombstone**: the audio, image, title, transcript and your name are all removed, and it displays as `[deleted]`. An empty record remains. | So the replies other people recorded on that thread are not destroyed along with your post. Those recordings are their work, not yours. The tombstone holds none of your personal data. |
+| Your voice posts **that other people have replied to**, and your replies | Each becomes a **`[deleted]` placeholder**: the audio, image, title, transcript and your name are all removed. An empty record remains, and reply counts on posts do not change. | So the replies other people recorded in that conversation are not destroyed or orphaned along with yours. Those recordings are their work, not yours. A placeholder holds none of your personal data. |
+| Boosts, listens and reactions you gave *(from 13 October 2026)* | Kept as **anonymous totals**; the handle a boost carried is replaced with `[deleted]` | So other people's posts keep their counts. Nothing on them identifies you. |
+| A **scrambled fingerprint** of your email address *(from 13 October 2026)* | Kept, linked to your old member number | So that if you come back with the same Google account you get the same number again. It can't be turned back into your email. Email us to have it deleted, and your number is retired for good. |
 | Reports you filed, or that were filed about you | Kept in **anonymised** form for up to **12 months** | Abuse-pattern analysis and legal defence. Personal identifiers are stripped. |
 | Aggregate analytics counts | Kept | They cannot be tied back to you. |
 | Encrypted cloud backups | Overwritten within **30 days** | Standard backup rotation. After this the data is unrecoverable. |

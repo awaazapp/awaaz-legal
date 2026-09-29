@@ -1,13 +1,13 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 28 September 2026
+**Last updated:** 29 September 2026
 **Effective date:** 4 August 2026
 
 ---
 
 ## Summary (the short version)
 
-Awaaz is a voice-only social network. You get in by signing in with Google, and that is now the only way in. From that sign-in we receive your Google email address, display name and profile photo URL. We store your email address, and we keep the Google display name and photo URL in a private part of your account that only you and we can read. Your public identity on Awaaz is a **member number** (for example `u/101`) that we assign when you join; other people never see your Google name or your Google photo. You can add an optional display name from your profile if you want to be known. We also store the voice notes you record and the follow relationships you create. We do not collect your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account — and with it, everything we hold about you — from inside the app at any time.
+Awaaz is a voice-only social network. You get in by signing in with Google, and that is now the only way in. From that sign-in we receive your Google email address, display name and profile photo URL. We store your email address, and we keep the Google display name and photo URL in a private part of your account that only you and we can read. Your public identity on Awaaz is a **member number** (for example `u/101`) that we assign when you join; other people never see your Google name or your Google photo. You can add an optional display name from your profile if you want to be known. We also store the voice notes you record and the follow relationships you create. We do not collect your phone number, your location, your contacts, or any advertising identifier. We do not sell your data. We do not share it with third-party advertisers. You can delete your account from inside the app at any time; you then have 30 days to change your mind before it is permanently deleted (see section 6).
 
 If you only read one section, read this one. The rest of this document explains the same thing in the detail that privacy law requires.
 
@@ -149,21 +149,33 @@ If your account is **disabled** (see [Terms §3](terms.md)), the same data is re
 
 ### 6.2 When you delete your account
 
-You can delete your account at any time from **Profile → Delete Account**. Google asks you to confirm the account first — that step exists so that a phone left unlocked cannot be used to erase someone's recordings. Deletion is permanent and is designed to be GDPR-compliant (right to erasure, Art. 17). Specifically:
+You can delete your account at any time from **Profile → Delete Account**. Google asks you to confirm the account first — that step exists so that a phone left unlocked cannot be used to delete someone's account.
 
-- **Your profile** (member number, display name, uploaded profile photo URL, bio, follower counts, badges) and its private part (email address, Google display name and photo URL) are hard-deleted from Firestore. Your member number is retired and never given to anyone else.
-- **Your follow relationships** (both directions) are hard-deleted.
-- **Your Firebase Authentication account** is deleted. That removes the link between your Google account and Awaaz, along with the account identifier, email address, display name and photo URL Google supplied, and the username cannot be used to sign in again. **Deleting your Awaaz account does not delete or change your Google account** — it only ends Awaaz's access to it. You can also revoke that access from your Google account's *Third-party apps & services* settings, though doing so on its own does not delete anything we already hold.
-- **Your voice posts that have no replies from other users** are hard-deleted along with their audio files, and any attached images, in Firebase Storage.
-- **Your voice posts that have replies from other users** are **tombstoned** — the audio file is deleted from Storage and the post's own text and author reference are stripped, but the post record remains so that other users' replies on the thread are not orphaned. A tombstoned post displays as "[deleted]" and contains none of your personal data. This is the minimum footprint required to preserve other users' content that they chose to make.
-- **Your replies on other users' posts** follow the same rule — audio and author reference removed, structural placeholder may remain if needed to preserve thread integrity.
+**You have 30 days to change your mind.** When you confirm, nothing is deleted yet:
+
+- your profile, voice posts and replies are **hidden** from everyone, you are **signed out on every device**, and notifications stop;
+- we **email you a confirmation** naming the date your account will be permanently deleted — 30 days after your request — and a reminder 3 days before that date;
+- **signing back in at any time before that date cancels the deletion**, and everything comes back exactly as it was.
+
+**On the 30th day** your account is permanently deleted:
+
+- **Your profile** (member number, display name, uploaded profile photo URL, bio, follower counts, badges) and its private part (email address, Google display name and photo URL, notification settings) are hard-deleted from Firestore.
+- **Your Firebase Authentication account** is deleted. That removes the link between your Google account and Awaaz, along with the account identifier, email address, display name and photo URL Google supplied. **Deleting your Awaaz account does not delete or change your Google account** — it only ends Awaaz's access to it. You can also revoke that access from your Google account's *Third-party apps & services* settings, though doing so on its own does not delete anything we already hold.
+- **Your voice notes and images** are deleted from Firebase Storage.
+- **Your voice posts that have no replies from other users** are deleted.
+- **Your voice posts that other people replied to, and your replies,** become **"[deleted]" placeholders**: the audio, image, title and your name are removed, and the placeholder keeps its place in the conversation so that other people's replies are not orphaned. A placeholder contains none of your personal data. The reply counts shown on posts do not change.
+- **Your follow relationships** (both directions) and your **mehfil memberships** are deleted.
 
 Audio files deleted from Firebase Storage may persist in encrypted Google Cloud backups for up to **30 days** before being permanently overwritten. After this period, the data is unrecoverable.
+
+**When these rules apply.** The 30-day window applies to deletions requested in the app from 29 September 2026 — the app says so before you confirm. The two additions in section 6.3 marked *from 13 October 2026* take effect on that date, 14 days after we announced them in the app; no account can reach its 30th day before then.
 
 ### 6.3 Retained beyond account deletion
 
 - **Reports you filed or that were filed against you** — retained in anonymized form for up to 12 months after account deletion for abuse-pattern analysis and legal defense. Personal identifiers are stripped.
 - **Aggregate, non-identifying analytics** — event counts that cannot be tied back to you are retained indefinitely.
+- **Boosts, listens and reactions you gave** *(from 13 October 2026)* — kept as anonymous totals, so that other people's posts keep their counts. Nothing on them identifies you: the handle that a boost carried is replaced with "[deleted]", and the account they pointed to no longer exists.
+- **A scrambled fingerprint of your email address** *(from 13 October 2026)*, linked to your old member number, so that if you ever come back with the same Google account you get the same number again, with a fresh start. It is a one-way code made with a secret key held on our servers: it cannot be turned back into your email address, and nobody without that key can check an address against it. It holds nothing else. If you would rather we did not keep it, email us and we will delete it — your number is then retired for good.
 
 ---
 
@@ -173,7 +185,7 @@ Depending on where you live, you have some or all of the following rights. Awaaz
 
 - **Right of access** — see all data we hold about you. Most of it is visible inside the app; for anything else, email us.
 - **Right to rectification** — correct inaccurate data. You can edit your display name, bio, profile photo and posts in-app; your member number cannot be changed. Your email address and the Google name and photo URL we hold privately were taken from your Google account at the moment you first signed in and are not refreshed automatically afterwards; if they have gone out of date and you want them corrected, email us.
-- **Right to erasure ("right to be forgotten")** — delete your account as described above.
+- **Right to erasure ("right to be forgotten")** — delete your account as described above; permanent deletion happens 30 days after your request unless you sign back in first.
 - **Right to data portability** — request a machine-readable export of your data. Email us and we will provide a JSON export of your profile, posts (including audio file links), replies, and follow graph within 30 days.
 - **Right to object / restrict processing** — tell us you do not want us to process your data beyond what is required to deliver the service.
 - **Right to withdraw consent** — where we rely on consent (e.g. push notifications), you can revoke it at any time from your device settings.

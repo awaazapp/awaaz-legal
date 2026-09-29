@@ -124,7 +124,7 @@ If something breaks the rules, please report it. That is the mechanism, and at o
 
 ## 8. Ending your use of Awaaz
 
-**You can leave at any time.** Delete your account from **Profile → Delete Account** — Google will ask you to confirm which account you are deleting, and then the deletion runs immediately. If you have uninstalled the app, lost access to your Google account, or your Awaaz account has been disabled, follow [Account Deletion](delete-account.md) instead. What is deleted and what is retained is set out in that document.
+**You can leave at any time.** Delete your account from **Profile → Delete Account** — Google will ask you to confirm which account you are deleting. Your account is then hidden and scheduled for permanent deletion 30 days later; signing back in before then cancels it. If you have uninstalled the app, lost access to your Google account, or your Awaaz account has been disabled, follow [Account Deletion](delete-account.md) instead. What is deleted and what is retained is set out in that document.
 
 **We may suspend or terminate an account** that breaks section 5, that is used to evade a previous suspension, or where we are required to by law. We do that by disabling it, as described in section 3.
 
