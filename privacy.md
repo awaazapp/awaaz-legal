@@ -1,6 +1,6 @@
 # Privacy Policy for Awaaz
 
-**Last updated:** 29 September 2026
+**Last updated:** 4 October 2026
 **Effective date:** 4 August 2026
 
 ---
@@ -63,6 +63,8 @@ What we then keep:
 - **Voice replies** — threaded voice recordings on other users' posts.
 - **Bio** — an optional text description on your profile.
 - **Images you choose to attach** — you may optionally attach one image to a post or a reply, and set a profile photo. These are selected by you from your device using the system image picker and are uploaded to Firebase Storage (`post_images/{your_user_id}/` for post and reply images, and a separate avatar path for profile photos). We only ever receive the specific image you pick; we never browse, scan, or index your photo library, and the app has no camera access.
+
+- **While you are still composing** — to make posting fast, a voice note starts uploading the moment you stop recording, and an attached image the moment you pick it, before you tap Post. Until you post, these files sit in a private holding area (`staging/{your_user_id}/`) that only your own account can read. If you re-record, remove the image, or close the screen without posting, the app deletes them straight away; anything the app could not delete (for example, if it was closed abruptly) is removed automatically within about two days, and nothing in the holding area is ever shown to anyone. A post or reply you have sent but that could not go out yet (no connection) is kept on your device until it is sent or you discard it.
 
 *Legal basis: performance of a contract (GDPR Art. 6(1)(b)).*
 
